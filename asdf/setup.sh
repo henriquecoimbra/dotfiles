@@ -23,6 +23,10 @@ if [ ! -d "$HOME/.asdf/installs/python" ]; then
     pip install black && \
     pip install psycopg2-binary && \    
     pip install pyright
+    pip install pulsectl
+    pip install netifaces
+    pip install psutil
+    pip install psutil
     _log "Python plugin added"
 fi
 

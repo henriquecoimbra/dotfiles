@@ -4,7 +4,8 @@
 
 ESSENTIALS="${1:-no}"
 if [ $ESSENTIALS = "--essentials" ]; then
-    sudo apt-get update; sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev
+    sudo apt-get update
+    sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev gconf2-common libgconf-2-4 gnome-screenshot
 fi
 
 if ! dpkg -s curl >> /dev/null; then
@@ -150,8 +151,6 @@ if ! dpkg -s microsoft-edge-dev >> /dev/null; then
     rm microsoft-edge-dev_113.0.1754.0-1_amd64.deb
     _log "microsoft-edge-dev installed"
 fi
-
-
 
 which java >> /dev/null
 if [ $? != 0 ]; then
